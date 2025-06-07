@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-family: 'Segoe UI';
+    transition: 200ms;
+    outline: none;
+}
+
+body{
+    height: 100dvh;
+    background: linear-gradient(100deg, rgb(76, 43, 226), rgb(77, 0, 128));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#convertForm{
+    background: #FFF;
+    border-radius: 15px;
+    width: 400px;
+    height: 450px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 3px 3px 3px #1a1a1a30;
+}
+
+section{
+    width: 100%;
+    height: 15%;
+}
+
+.De-Para{
+    display: flex;
+}
+
+.De-Para div{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.De-Para .div-maior{
+    width: 70%;
+}
+
+.item{
+    width: 90%;
+    height: 70%;
+    border-radius: 15px;
+    box-shadow: 0 0 3px 1px #1a1a1a10;
+    border: 1px solid #1a1a1a30;
+    padding: 5px;
+    background: #1a1a1a10;
+    animation: open 1s;
+}
+
+.item:focus{
+    box-shadow: 0 0 3px 3px rgb(76, 0, 255, .3);
+}
+
+.btn-convert button{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background: linear-gradient(100deg, rgb(76, 43, 226), rgb(77, 0, 128));
+    font-weight: bold;
+    font-size: 100%;
+    color: #FFF;
+    animation: open 1s;
+}
+
+.btn-convert button:hover{
+    box-shadow: 0 0 3px 3px rgb(77, 7, 168, .5);
+    transform: translateY(-3px);
+    cursor: pointer;
+}
+
+.btn-convert button:active{
+    transform: translateY(0);
+    box-shadow: 0 0 3px 3px rgba(255, 0, 0, 0.5)
+}
+
+.span-resultado{
+    background: linear-gradient(-45deg, red, rgb(173, 28, 113));
+    border-radius: 15px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: open 1s;
+    color: #FFF;
+    font-weight: bold;
+}
+
+label{font-weight: bold;animation: open .5s;}
+#res{display: flex;align-items: center;justify-content: flex-start;color: #1a1a1a99;animation: open 1s; font-weight: bold;}
+
+.spin{
+    display: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border-top: 3px solid blue;
+    border-bottom: 2px solid #1a1a1a10;
+    border-left: 2px solid #1a1a1a10;
+    border-right: 2px solid #1a1a1a10;
+    background: transparent;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes open {
+    from{
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    to{
+        opacity: 100;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #convertForm{
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    #convertForm{
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    #convertForm{
+        width: 250px;
+    }
+}
